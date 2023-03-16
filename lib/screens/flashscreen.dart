@@ -1,4 +1,3 @@
-import 'package:burger_app/screens/store.dart';
 import 'package:flutter/material.dart';
 
 class FlashScreen extends StatefulWidget {
@@ -9,8 +8,6 @@ class FlashScreen extends StatefulWidget {
 
 class _FlashScreenState extends State<FlashScreen> {
   
-  List <Widget> screens = const <Widget> [FlashScreen(), Store()];
-
   @override
   Widget build(BuildContext context) {
     

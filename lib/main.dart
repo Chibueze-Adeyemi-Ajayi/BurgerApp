@@ -1,3 +1,5 @@
+import 'package:burger_app/screens/flashscreen.dart';
+import 'package:burger_app/screens/store.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Burger App',
       theme: ThemeData(primarySwatch: Colors.red,),
       home: const MyHomePage(),
       debugShowCheckedModeBanner: false,
@@ -34,6 +36,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   
+  List <Widget> screens = const <Widget> [FlashScreen(), Store()];
+  int index = 0;
+
   @override
   Widget build(BuildContext context) {
     
@@ -43,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           color: Color.fromARGB(255, 31, 30, 30),
+          child: screens[index],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
