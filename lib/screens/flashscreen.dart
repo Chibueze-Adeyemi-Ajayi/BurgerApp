@@ -17,6 +17,7 @@ class _FlashScreenState extends State<FlashScreen> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           color: Color.fromARGB(255, 31, 30, 30),
+          child: Text("jilo Billionaire", style: TextStyle(color: Colors.white, fontSize: 45),),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

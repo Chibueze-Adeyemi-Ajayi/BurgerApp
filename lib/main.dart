@@ -43,14 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      body: Center(
-        child: Container(
+      body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           color: Color.fromARGB(255, 31, 30, 30),
           child: screens[index],
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
