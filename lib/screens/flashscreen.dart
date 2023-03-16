@@ -11,7 +11,7 @@ class FlashScreen extends StatefulWidget {
 class _FlashScreenState extends State<FlashScreen> {
   
 final PageController _pageController = PageController();
-final Color _color_1 =Colors.white;
+Color _color_1 =Colors.white, _color_2 =Colors.white24,  _color_3 =Colors.white24;
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +20,21 @@ final Color _color_1 =Colors.white;
       if (_pageController.hasClients) {
         double? _page_index = _pageController.page;
         if (_page_index == 0.0) {
-
+          setState(() {
+            _color_1 = Colors.white;  _color_2 = Colors.white24; _color_3 = Colors.white24;
+          });
         } else if (_page_index == 1.0) {
-
+          setState(() {
+            _color_1 = Colors.white24;  _color_2 = Colors.white; _color_3 = Colors.white24;
+          });
         } else if (_page_index == 2.0) {
-
+          setState(() {
+            _color_1 = Colors.white24;  _color_2 = Colors.white24; _color_3 = Colors.white;
+          });
         }
       }
     });
-    
+
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(20),
@@ -39,7 +45,7 @@ final Color _color_1 =Colors.white;
           mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(height: 50,),
-            Container(width: 250, height: 250, child: PageView(
+            Container(width: 250, height: 250, child: PageView(allowImplicitScrolling: true,
               controller: _pageController,
               children: [
               ImagePage(),ImagePage(),ImagePage(),
@@ -48,14 +54,14 @@ final Color _color_1 =Colors.white;
             Row(
               crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
               children: [ 
-              Icon(Icons.circle, color: Colors.white, size: 15,), Container(width: 5,),
-              Icon(Icons.circle, color: Colors.white, size: 15,), Container(width: 5,),
-              Icon(Icons.circle, color: Colors.white, size: 15,),
+              Icon(Icons.circle, color: _color_1, size: 15), Container(width: 5,),
+              Icon(Icons.circle, color: _color_2, size: 15,), Container(width: 5,),
+              Icon(Icons.circle, color: _color_3, size: 15,),
             ],),
             Container(height: 40,),
             const Text("Try the best \nburgers now !", textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold, fontFamily: "JosefinSans"),),
             Container(height: 35,),
-            const Text("Find different flavours and \nenjoy them at every moments", textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.normal, fontFamily: "LuxuriousRoman"),),
+            const Text("Find different flavours and \nenjoy them at every moments", textAlign: TextAlign.center, style: TextStyle(color: Colors.white70, fontSize: 20, fontWeight: FontWeight.normal, fontFamily: "GideonRoman"),),
             Container(height: 35,),
             GestureDetector(child: Icon(Icons.arrow_circle_right_sharp, size: 75, color: Colors.white54,),
             onTap: () {},)
