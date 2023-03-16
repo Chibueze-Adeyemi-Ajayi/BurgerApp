@@ -12,14 +12,20 @@ class _FlashScreenState extends State<FlashScreen> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      body: Center(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          color: Color.fromARGB(255, 31, 30, 30),
-          child: Text("jilo Billionaire", style: TextStyle(color: Colors.white, fontSize: 45),),
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: Container(
+        padding: EdgeInsets.all(20),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Color.fromARGB(255, 31, 30, 30),
+        child: Center(child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.network("https://www.transparentpng.com/thumb/food/PIIPbV-cola-potato-chips-burger-food-free-png.png", width: 250,),
+            Container(height: 50,),
+            const Text("Try the best burgers now !", textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 35),),
+          ],
+        ),) 
+      ),
     );
   }
 }
