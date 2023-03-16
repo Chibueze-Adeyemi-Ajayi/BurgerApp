@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// sim
+// simp
 
 void main() {
   runApp(const MyApp());
