@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // simple burger delivery app UI
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor: Color.fromARGB(255, 31, 30, 30), // navigation bar color
+    statusBarColor: Color.fromARGB(255, 31, 30, 30), // status bar color
+  ));
   runApp(const MyApp());
 }
 
@@ -34,9 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
     
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[ ],
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          color: Color.fromARGB(255, 31, 30, 30),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
