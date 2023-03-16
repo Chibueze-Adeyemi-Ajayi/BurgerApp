@@ -77,6 +77,9 @@ flutter:
     - family: JosefinSans
       fonts:
         - asset: assets/fonts/JosefinSans-VariableFont_wght.ttf
+    - family: LuxuriousRoman
+      fonts:
+        - asset: assets/fonts/LuxuriousRoman-Regular.ttf
    
   
   # For details regarding fonts from package dependencies,
