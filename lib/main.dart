@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// simple burger delivery app U
+// simple burger delivery app UI
 
 void main() {
   runApp(const MyApp());
