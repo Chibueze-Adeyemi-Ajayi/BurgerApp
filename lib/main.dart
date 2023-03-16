@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// simple burger deli
+// simple burger deliv
 
 void main() {
   runApp(const MyApp());
