@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// simple burger d
+// simple burger de
 
 void main() {
   runApp(const MyApp());
