@@ -23,7 +23,6 @@ class _StoreState extends State<Store> {
           child: Container(
             padding: EdgeInsets.all(15),
             width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
             color: Color.fromARGB(255, 31, 30, 30),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start, crossAxisAlignment: CrossAxisAlignment.start,

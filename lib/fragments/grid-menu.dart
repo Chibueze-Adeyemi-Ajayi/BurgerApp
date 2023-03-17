@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // list of subsidiary product
 class GridMenu extends StatefulWidget {
@@ -9,16 +10,17 @@ class GridMenu extends StatefulWidget {
 
 class _GridMenuState extends State<GridMenu> {
   
-  Widget Options (Icon icon, Text text) {
+  Widget Options (FaIcon icon, Text text) {
     return Container(
-      padding: EdgeInsets.all(8), width: 70, height: 70,
+      padding: EdgeInsets.all(8), width: 68, height: 68,
       decoration: BoxDecoration(color: Colors.white12, borderRadius: BorderRadius.circular(35)),
-      child: Column(children: [
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
         icon, text
       ],),
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +28,13 @@ class _GridMenuState extends State<GridMenu> {
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, crossAxisAlignment: CrossAxisAlignment.center, 
       children: [
         GestureDetector(onTap: () { }, 
-        child: Options(const Icon(Icons.abc, size: 20, color: Colors.white54,), const Text("Test", style: TextStyle(color: Colors.white54),)),),
+        child: Options(const FaIcon(FontAwesomeIcons.bowlFood, color: Colors.white38,), const Text("Chicken", style: TextStyle(color: Colors.white54),)),),
+        GestureDetector(onTap: () { }, 
+        child: Options(const FaIcon(FontAwesomeIcons.cow, color: Colors.white38,), const Text("Beef", style: TextStyle(color: Colors.white54),)),),
+        GestureDetector(onTap: () { }, 
+        child: Options(const FaIcon(FontAwesomeIcons.leaf, color: Colors.white38,), const Text("Veges", style: TextStyle(color: Colors.white54),)),),
+        GestureDetector(onTap: () { }, 
+        child: Options(const FaIcon(FontAwesomeIcons.cheese, color: Colors.white38,), const Text("Cheese", style: TextStyle(color: Colors.white54),)),),
       ],),);
   }
 
