@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-// list of subsidiary produc
+// list of subsidiary product
 class GridMenu extends StatefulWidget {
   const GridMenu({Key? key,}) : super(key: key);
   @override
