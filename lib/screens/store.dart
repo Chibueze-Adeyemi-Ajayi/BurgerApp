@@ -28,15 +28,16 @@ class _StoreState extends State<Store> {
               mainAxisAlignment: MainAxisAlignment.start, crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(height: 75,),
-                Text("What is your", textAlign: TextAlign.left, style: TextStyle(color: Colors.white60, fontSize: 27, ),),
+                const Text("What is your", textAlign: TextAlign.left, style: TextStyle(color: Colors.white60, fontSize: 27, ),),
                 Container(height: 5,),
-                Text("favorite burger ?", style: TextStyle(color: Colors.white, fontSize: 35, )),
+                const Text("favorite burger ?", style: TextStyle(color: Colors.white, fontSize: 35, )),
                 Container(height: 30,),
                 Container(height: 55, width: MediaQuery.of(context).size.width, decoration: BoxDecoration(
                   color: Colors.white12, borderRadius: BorderRadius.circular(5)
-                ), padding: EdgeInsets.all(14), child: Text("Search", style: TextStyle(color: Colors.white70, fontSize: 23),),),
+                ), padding: const EdgeInsets.all(14), child: const Text("Search", style: TextStyle(color: Colors.white70, fontSize: 23),),),
                 Container(height: 30,),
-                GridMenu()
+                const GridMenu(),
+                Container(height: 30,)
               ],
             ),
           ),
