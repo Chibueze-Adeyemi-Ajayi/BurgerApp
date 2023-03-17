@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    systemNavigationBarColor: Color.fromARGB(255, 31, 30, 30), // navigation bar color
+    systemNavigationBarColor: Colors.black87, // navigation bar color
     statusBarColor: Color.fromARGB(255, 31, 30, 30), // status bar color
   ));
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Burger App',
-      theme: ThemeData(primarySwatch: Colors.red,),
+      theme: ThemeData(primarySwatch: Colors.grey,),
       home: const MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -37,7 +37,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   
   List <Widget> screens = const <Widget> [FlashScreen(), Store()];
-  int index = 0;
+  int index = 1;
 
   @override
   Widget build(BuildContext context) {
