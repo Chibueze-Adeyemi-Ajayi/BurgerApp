@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// bott
+// botto
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key,}) : super(key: key);
   @override
