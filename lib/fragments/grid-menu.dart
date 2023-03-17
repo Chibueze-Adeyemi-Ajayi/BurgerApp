@@ -8,42 +8,26 @@ class GridMenu extends StatefulWidget {
 }
 
 class _GridMenuState extends State<GridMenu> {
-  List <Icon> icons = [
-    Icon(Icons.home, color: Colors.white60,),
-    Icon(Icons.store, color: Colors.white60,),
-    Icon(Icons.search, color: Colors.white60,),
-    Icon(Icons.person, color: Colors.white60,),
-  ];
-  List <Text> texts = [
-    Text("Chicken", style: TextStyle(color: Colors.white60, fontSize: 8),),
-    Text("Beef", style: TextStyle(color: Colors.white60),),
-    Text("Vegetable", style: TextStyle(color: Colors.white60),),
-    Text("Cheese", style: TextStyle(color: Colors.white60),),
-  ];
+  
+  Widget Options (Icon icon, Text text) {
+    return Container(
+      padding: EdgeInsets.all(8), width: 70, height: 70,
+      decoration: BoxDecoration(color: Colors.white12, borderRadius: BorderRadius.circular(35)),
+      child: Column(children: [
+        icon, text
+      ],),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70, width: MediaQuery.of(context).size.width,
-      color: Colors.transparent,
-      child: GridView.count(
-        // physics: NeverScrollableScrollPhysics(),
-        scrollDirection: Axis.vertical,
-      // Create a grid with 2 columns. If you change the scrollDirection to
-      // horizontal, this produces 2 rows.
-      crossAxisCount: 4,
-      // Generate 100 widgets that display their index in the List.
-      children: List.generate(4, (index) {
-        return Center(
-          child: GestureDetector(onTap: () {}, child: Container(
-            width: 70, height: 70, decoration: BoxDecoration(color: Colors.white12, 
-            borderRadius: BorderRadius.circular(35)),
-            child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-            icons[index], texts[index], 
-          ],),)),
-        );
-      }),
-    ),);
+      width: MediaQuery.of(context).size.width, height: 75, 
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, crossAxisAlignment: CrossAxisAlignment.center, 
+      children: [
+        GestureDetector(onTap: () { }, 
+        child: Options(const Icon(Icons.abc, size: 20, color: Colors.white54,), const Text("Test", style: TextStyle(color: Colors.white54),)),),
+      ],),);
   }
+
 }
