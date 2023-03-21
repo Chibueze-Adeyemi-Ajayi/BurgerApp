@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
       index = value;
     });
   }
-  // application screen
+  // application screens
   List <Widget> screens = const <Widget> [
      FlashScreen(callback: callback,), 
      Store(callback: callback),
