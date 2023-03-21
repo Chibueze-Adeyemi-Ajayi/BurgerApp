@@ -36,7 +36,7 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-// cal
+// call
 callback (value) {
   _MyHomePageState().useState(value);
 }
