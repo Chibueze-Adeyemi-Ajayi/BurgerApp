@@ -43,7 +43,7 @@ callback (value) {
 
 class _MyHomePageState extends State<MyHomePage> {
   int index = 0;
-  // state functio
+  // state function
   void useState (value) {
     setState(() {
       index = value;
