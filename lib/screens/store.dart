@@ -1,16 +1,19 @@
 import 'package:burger_app/fragments/bottom-nav-bar.dart';
+import 'package:burger_app/fragments/food-item-grid.dart';
 import 'package:burger_app/fragments/grid-menu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Store extends StatefulWidget {
-  const Store({Key? key,}) : super(key: key);
+  const Store({required this.callback});
+  final callback; 
   @override
-  State<Store> createState() => _StoreState();
+  State<StatefulWidget> createState() => _StoreState(callback: this.callback);
 }
 
-class _StoreState extends State<Store> {
-  
+class _StoreState extends State<StatefulWidget> {
+   _StoreState({required this.callback});
+  final callback;
   @override
   Widget build(BuildContext context) {
     
@@ -37,7 +40,7 @@ class _StoreState extends State<Store> {
                 ), padding: const EdgeInsets.all(14), child: const Text("Search", style: TextStyle(color: Colors.white70, fontSize: 23),),),
                 Container(height: 30,),
                 const GridMenu(),
-                Container(height: 30,)
+                const FoodItemsGrid()
               ],
             ),
           ),

@@ -24,7 +24,7 @@ class _GridMenuState extends State<GridMenu> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width, height: 75, 
+      width: MediaQuery.of(context).size.width, height: 70, 
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, crossAxisAlignment: CrossAxisAlignment.center, 
       children: [
         GestureDetector(onTap: () { }, 

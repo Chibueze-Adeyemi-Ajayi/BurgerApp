@@ -1,15 +1,18 @@
 import 'package:burger_app/fragments/image_pages.dart';
+import 'package:burger_app/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FlashScreen extends StatefulWidget {
-  const FlashScreen({Key? key,}) : super(key: key);
+  const FlashScreen({Key? key, required this.callback}) : super(key: key);
+  final callback;
   @override
-  State<FlashScreen> createState() => _FlashScreenState();
+  State<FlashScreen> createState() => _FlashScreenState(callback: callback);
 }
 
 class _FlashScreenState extends State<FlashScreen> {
-  
+_FlashScreenState({required this.callback});
+final callback;
 final PageController _pageController = PageController();
 Color _color_1 =Colors.white, _color_2 =Colors.white24,  _color_3 =Colors.white24;
 
@@ -36,7 +39,7 @@ Color _color_1 =Colors.white, _color_2 =Colors.white24,  _color_3 =Colors.white2
     });
 
     return Scaffold(
-      body: Container(
+      body: SingleChildScrollView(child: Container(
         padding: EdgeInsets.all(20),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -64,10 +67,10 @@ Color _color_1 =Colors.white, _color_2 =Colors.white24,  _color_3 =Colors.white2
             const Text("Find different flavours and \nenjoy them at every moments", textAlign: TextAlign.center, style: TextStyle(color: Colors.white70, fontSize: 20, fontWeight: FontWeight.normal, fontFamily: "GideonRoman"),),
             Container(height: 35,),
             GestureDetector(child: Icon(Icons.arrow_circle_right_sharp, size: 75, color: Colors.white54,),
-            onTap: () {},)
+            onTap: () {callback(1);},)
           ],
         ),) 
-      ),
+      ),)
     );
   }
 }

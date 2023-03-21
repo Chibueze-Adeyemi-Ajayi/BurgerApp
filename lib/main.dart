@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:burger_app/screens/flashscreen.dart';
 import 'package:burger_app/screens/store.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +8,7 @@ import 'package:flutter/services.dart';
 // simple burger delivery app UI
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     systemNavigationBarColor: Colors.black87, // navigation bar color
     statusBarColor: Color.fromARGB(255, 31, 30, 30), // status bar color
   ));
@@ -34,11 +36,23 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  
-  List <Widget> screens = const <Widget> [FlashScreen(), Store()];
-  int index = 1;
+callback (value) {
+  _MyHomePageState().useState(value);
+}
 
+class _MyHomePageState extends State<MyHomePage> {
+  int index = 0;
+  void useState (value) {
+    setState(() {
+      index = value;
+    });
+  }
+  List <Widget> screens = const <Widget> [
+     FlashScreen(callback: callback,), 
+     Store(callback: callback),
+    //Store(callback: callback),
+  ];
+  
   @override
   Widget build(BuildContext context) {
     
