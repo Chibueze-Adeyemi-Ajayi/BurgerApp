@@ -7,7 +7,7 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  // nav b
+  // nav bar
   List <Icon> icons = [
     Icon(Icons.home, color: Colors.white60,),
     Icon(Icons.store, color: Colors.white60,),
