@@ -15,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     Icon(Icons.person, color: Colors.white60,),
   ];
   // nav bar labels array 
-  List <Text> texts = [
+  static const List <Text> texts = [
     Text("Home", style: TextStyle(color: Colors.white60),),
     Text("Shop", style: TextStyle(color: Colors.white60),),
     Text("Search", style: TextStyle(color: Colors.white60),),
