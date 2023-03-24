@@ -5,7 +5,7 @@ class BottomNavBar extends StatefulWidget {
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
-// bottom navigation b
+// bottom navigation 
 class _BottomNavBarState extends State<BottomNavBar> {
   // nav bar icon
   List <Icon> icons = [
