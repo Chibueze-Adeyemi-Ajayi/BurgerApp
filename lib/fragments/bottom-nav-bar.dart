@@ -7,7 +7,7 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  // nav bar icon ar
+  // nav bar icon arr
   List <Icon> icons = [
     Icon(Icons.home, color: Colors.white60,),
     Icon(Icons.store, color: Colors.white60,),
