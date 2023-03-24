@@ -14,7 +14,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     Icon(Icons.search, color: Colors.white60,),
     Icon(Icons.person, color: Colors.white60,),
   ];
-  // nav bar labels ar
+  // nav bar labels arr
   List <Text> texts = [
     Text("Home", style: TextStyle(color: Colors.white60),),
     Text("Shop", style: TextStyle(color: Colors.white60),),
