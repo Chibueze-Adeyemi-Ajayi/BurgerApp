@@ -39,7 +39,7 @@ Color _color_1 =Colors.white, _color_2 =Colors.white24,  _color_3 =Colors.white2
         }
       }
     });
-    // scaffold widge
+    // scaffold widget
     return Scaffold(
       body: SingleChildScrollView(child: Container(
         padding: EdgeInsets.all(20),
