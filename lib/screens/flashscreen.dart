@@ -3,7 +3,7 @@ import 'package:burger_app/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-// Splash scr
+// Splash scre
 class FlashScreen extends StatefulWidget {
   const FlashScreen({Key? key, required this.callback}) : super(key: key);
   final callback;
