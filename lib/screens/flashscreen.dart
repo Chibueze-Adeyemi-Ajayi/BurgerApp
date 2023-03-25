@@ -12,7 +12,7 @@ class FlashScreen extends StatefulWidget {
 }
 
 class _FlashScreenState extends State<FlashScreen> {
-  // callback 
+  // callback f
 _FlashScreenState({required this.callback});
 final callback;
 final PageController _pageController = PageController();
