@@ -12,7 +12,7 @@ class _FoodItemState extends State<FoodItem> {
   @override
   Widget build(BuildContext context) {
     // 
-    rceturn Card(
+    return Card(
       color: Colors.white24, 
       child: Container( height: 400,
         padding: EdgeInsets.all(6),
