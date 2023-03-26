@@ -11,7 +11,7 @@ class _FoodItemState extends State<FoodItem> {
 
   @override
   Widget build(BuildContext context) {
-    // card vi
+    // card vie
     return Card(
       color: Colors.white24, 
       child: Container( height: 400,
