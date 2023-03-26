@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-// list of subsidiary product in grid v
+// list of subsidiary product in grid vi
 class GridMenu extends StatefulWidget {
   const GridMenu({Key? key,}) : super(key: key);
   @override
