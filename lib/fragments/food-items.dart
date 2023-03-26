@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// foo
+// food
 class FoodItem extends StatefulWidget {
    FoodItem({Key? key});
   @override
