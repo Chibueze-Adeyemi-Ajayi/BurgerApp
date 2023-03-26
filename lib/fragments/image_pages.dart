@@ -13,7 +13,7 @@ class _ImagePageState extends State<ImagePage> {
   Widget build(BuildContext context) {
     
     return Container(
-      // Imag
+      // Image
       child: Image.network("https://www.transparentpng.com/thumb/food/PIIPbV-cola-potato-chips-burger-food-free-png.png", width: 250,),
     );
   }
