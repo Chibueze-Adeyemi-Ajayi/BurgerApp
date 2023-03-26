@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// image widget 
+// image widget o
 class ImagePage extends StatefulWidget {
   const ImagePage({Key? key,}) : super(key: key);
   @override
