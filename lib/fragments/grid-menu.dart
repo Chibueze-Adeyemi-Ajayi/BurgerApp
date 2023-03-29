@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-// I am a young multi b
+// I am a young multi bi
 
 // list of subsidiary product in grid view widget
 class GridMenu extends StatefulWidget {
